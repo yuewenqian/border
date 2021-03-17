@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.border">
+
+    <uses-sdk tools:overrideLibrary="com.qmuiteam.qmui,com.qmuiteam.qmui.arch"/>
+
 
     <application
         android:allowBackup="true"
