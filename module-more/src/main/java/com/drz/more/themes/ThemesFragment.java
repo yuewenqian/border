@@ -23,6 +23,7 @@ import java.util.ArrayList;
 public class ThemesFragment extends MvvmLazyFragment<MoreFragmentThemesBinding, ThemeFragmentViewModel> implements IThemeView{
 
     private ThemesFragmentPageAdapter adapter;
+    private final String NAME_FOR_TAB = "旅行在路上";
 
     public static ThemesFragment newInstance(){
         return new ThemesFragment();
@@ -39,24 +40,24 @@ public class ThemesFragment extends MvvmLazyFragment<MoreFragmentThemesBinding, 
     }
 
     private void initView() {
-        viewDataBinding.vpContent.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(viewDataBinding.tabLayout));
+//        viewDataBinding.vpContent.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(viewDataBinding.tabLayout));
         viewDataBinding.vpContent.setOffscreenPageLimit(1);
-        viewDataBinding.tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                viewDataBinding.vpContent.setCurrentItem(tab.getPosition());
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });
+//        viewDataBinding.tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+//            @Override
+//            public void onTabSelected(TabLayout.Tab tab) {
+//                viewDataBinding.vpContent.setCurrentItem(tab.getPosition());
+//            }
+//
+//            @Override
+//            public void onTabUnselected(TabLayout.Tab tab) {
+//
+//            }
+//
+//            @Override
+//            public void onTabReselected(TabLayout.Tab tab) {
+//
+//            }
+//        });
         adapter = new ThemesFragmentPageAdapter(getChildFragmentManager(), FragmentPagerAdapter.BEHAVIOR_SET_USER_VISIBLE_HINT);
         viewDataBinding.vpContent.setAdapter(adapter);
         viewModel.initModel();
@@ -80,11 +81,17 @@ public class ThemesFragment extends MvvmLazyFragment<MoreFragmentThemesBinding, 
 
     @Override
     public void onDataLoaded(ArrayList<Tabs> tabs) {
-        adapter.setData(tabs);
-        viewDataBinding.tabLayout.removeAllTabs();
-        for (Tabs tabs1 : tabs){
-            viewDataBinding.tabLayout.addTab(viewDataBinding.tabLayout.newTab().setText(tabs1.getName()));
+        ArrayList<Tabs> temp = new ArrayList();
+        for (Tabs tab : tabs) {
+            if (tab.getName().equals(NAME_FOR_TAB)) {
+                temp.add(tab);
+            }
         }
-        viewDataBinding.tabLayout.scrollTo(0,0);
+        adapter.setData(temp);
+//        viewDataBinding.tabLayout.removeAllTabs();
+//        for (Tabs tabs1 : tabs){
+//            viewDataBinding.tabLayout.addTab(viewDataBinding.tabLayout.newTab().setText(tabs1.getName()));
+//        }
+//        viewDataBinding.tabLayout.scrollTo(0,0);
     }
 }

@@ -84,8 +84,8 @@ public class MainActivity
             .addItem(R.drawable.main_community,
                 "社区",
                 ColorUtils.getColor(this, R.color.main_bottom_check_color))
-            .addItem(R.drawable.main_notify,
-                "通知",
+            .addItem(R.drawable.main_edit,
+                "编辑",
                 ColorUtils.getColor(this, R.color.main_bottom_check_color))
             .addItem(R.drawable.main_user,
                 "我的",

@@ -31,7 +31,7 @@ public class RouterFragmentPath
         public static final String PAGER_COMMUNITY = COMMUNITY + "/Community";
     }
     
-    /** 更多组件 */
+    /** 编辑组件 */
     public static class More
     {
         private static final String MORE = "/more";

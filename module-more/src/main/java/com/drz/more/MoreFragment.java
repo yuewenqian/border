@@ -82,10 +82,10 @@ public class MoreFragment
     {
         ArrayList<Fragment> fragments = new ArrayList<>();
         fragments.add(ThemesFragment.newInstance());
-        fragments.add(MessageFragment.newInstance());
-        fragments.add(TopicFragment.newInstance());
+//        fragments.add(MessageFragment.newInstance());
+//        fragments.add(TopicFragment.newInstance());
         adapter.setData(fragments);
-        viewDataBinding.vpHomeContent.setCurrentItem(1);
+        viewDataBinding.vpHomeContent.setCurrentItem(0);
     }
     
     @Override
