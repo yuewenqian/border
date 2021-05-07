@@ -82,8 +82,6 @@ public class UserFragment
         adapter.setFooterView(getFooterView());
         viewDataBinding.rvTables.setAdapter(adapter);
         viewDataBinding.ivMore.setOnClickListener(v -> {start(getContext());});
-        viewDataBinding.tvLike.setOnClickListener(v -> {start(getContext());});
-        viewDataBinding.tvReply.setOnClickListener(v -> {start(getContext());});
     }
 
     private View getFooterView() {

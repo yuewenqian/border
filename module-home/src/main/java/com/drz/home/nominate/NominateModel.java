@@ -176,8 +176,7 @@ public class NominateModel<T> extends BasePagingModel<T>
         SquareCardCollectionBean squareCardCollectionBean)
     {
         TitleViewModel titleLeftAndRightViewModel = new TitleViewModel();
-        titleLeftAndRightViewModel.title =
-            squareCardCollectionBean.getData().getHeader().getTitle();
+        titleLeftAndRightViewModel.title = "开心每一天";
         titleLeftAndRightViewModel.actionTitle =
             squareCardCollectionBean.getData().getHeader().getRightText();
         viewModels.add(titleLeftAndRightViewModel);
@@ -202,9 +201,7 @@ public class NominateModel<T> extends BasePagingModel<T>
         followCardViewModel.authorUrl =
             cardBean.getData().getContent().getData().getAuthor().getIcon();
         followCardViewModel.description =
-            cardBean.getData().getContent().getData().getAuthor().getName()
-                + " / #"
-                + cardBean.getData().getContent().getData().getCategory();
+            cardBean.getData().getContent().getData().getCategory();
         followCardViewModel.title =
             cardBean.getData().getContent().getData().getTitle();
         followCardViewModel.nickName = cardBean.getData().getContent().getData().getAuthor().getName();

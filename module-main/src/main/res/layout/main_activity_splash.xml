@@ -20,11 +20,11 @@
         android:textColor="@android:color/white"
         android:layout_centerInParent="true"
         android:textSize="25sp"
-        android:text="Eyepetizer" />
+        android:text="Border" />
 
     <com.drz.common.views.CommonCustomTextView
         android:id="@+id/tv1"
-        android:text="Daily appetizers for your eyes，Bon eyepetit"
+        android:text="Border, expend the border of your horizon."
         android:textColor="@android:color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -35,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/white"
-        android:text="每日精选视频推介，让你大开眼界。"
+        android:text="Border,扩展你的人生视界。"
         android:layout_marginBottom="46dp"
         android:id="@+id/textView"
         android:layout_alignParentBottom="true"

@@ -41,7 +41,7 @@ public class HomeFragment extends MvvmLazyFragment<HomeFragmentHomeBinding, IMvv
         List<Fragment> fragments = new ArrayList<>();
         fragments.add(DisCoverFragment.newInstance());
         fragments.add(NominateFragment.newInstance());
-        fragments.add(DailyFragment.newInstance());
+        //fragments.add(DailyFragment.newInstance());
         pageAdapter.setData(fragments);
         viewDataBinding.vpHomeContent.setCurrentItem(1);
 

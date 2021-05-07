@@ -36,7 +36,7 @@ public class RouterFragmentPath
     {
         private static final String MORE = "/more";
         
-        /** 更多页面 */
+        /** 编辑页面 */
         public static final String PAGER_MORE = MORE + "/More";
     }
     
